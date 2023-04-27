@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="page3">
+        <h1>美食地圖</h1>
+        <select name="功能" id="choice3" style="width: 200px; margin: 20px auto 10px; font-size: 15px;">
+            <option class="page2" value="start" style="background-color: white;">--請選擇功能--</option>
+            <option class="page2" value="bycity" style="background-color: white;">依地區搜尋</option>
+            <option class="page2" value="byrate" style="background-color: white;">依店家評價搜尋</option>
+            <option class="page2" value="bywrate" style="background-color: white;">依店家與餐點評價搜尋</option>
+        </select>
+        <label for="city" style="font-size: 22px; font-weight: 400; margin-bottom: -15px;">地區</label>
+        <input disabled type="text" id="city" style="width: 200px; margin: 20px auto">
+        <label for="rate" style="font-size: 22px; font-weight: 400; margin-bottom: -15px;">店家評價</label>
+        <input disabled type="number" id="rate" style="width: 200px; margin: 20px auto">
+        <label for="menurate" style="font-size: 22px; font-weight: 400; margin-bottom: -15px;">餐點評價</label>
+        <input disabled type="number" id="menurate" style="width: 200px; margin: 20px auto">
+        <button id="btn" style="width: 200px; margin: 20px auto; font-size: 15px;">確定</button>
+        <div class="resfrom">
+            <p id="res"></p>
+        </div>
+
+    </div>
+
+    <script src="./user.js"></script>
+</body>
+
+</html>

@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    <button id="btn">aaaaaaaaaaaaaaaaaa</button>
-    
+    <div class="page1">
+        <h1>店家登錄頁面</h1>
+
+        <a href="./menu.html"
+            style="text-decoration: none; margin: 0 auto;  font-size: 20px; font-weight: 600; background-color: darkcyan; width: 200px;">前往菜單登錄頁面</a>
+        <select name="功能" id="choice" style="width: 200px; margin: 20px auto 10px; font-size: 15px;">
+            <option class="page1" value="start" style="background-color: white;">--請選擇功能--</option>
+            <option class="page1" value="addshop" style="background-color: white;">新增店家</option>
+            <option class="page1" value="editshop" style="background-color: white;">更新店家地址</option>
+            <option class="page1" value="deletedata" style="background-color: white;">刪除店家</option>
+        </select>
+        <label for="shop" style="font-size: 22px; font-weight: 400; margin-bottom: -15px;">店名</label>
+        <input disabled type="text" id="shop" style="width: 200px; margin: 20px auto">
+        <label for="city" style="font-size: 22px; font-weight: 400; margin-bottom: -15px;">店址</label>
+        <input disabled type="text" id="city" style="width: 200px; margin: 20px auto">
+        <label for="newcity" style="font-size: 22px; font-weight: 400; margin-bottom: -15px;">新店址</label>
+        <input disabled type="text" id="newcity" style="width: 200px; margin: 20px auto">
+        <button id="btn" style="width: 200px; margin: 20px auto; font-size: 15px;">確定</button>
+        <div class="page1 respon">
+            <p id="res" style="position: absolute; top: -7px;"></p>
+        </div>
+    </div>
+
     <script src="./main.js"></script>
 </body>
+
 </html>

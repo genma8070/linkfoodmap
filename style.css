@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.page1 {
+  margin: 0 auto;
+  text-align: center;
+  width: 400px;
+  height: 600px;
+  background-color: cadetblue;
+  display: flex;
+  flex-direction: column;
+}
+.page1 .respon {
+  position: relative;
+  align-items: center;
+  text-align: center;
+  margin: 20px auto;
+  width: 250px;
+  height: 40px;
+  background-color: white;
+  border-radius: 10px;
+  border-color: crimson;
+}
+.page1 .respon h2 {
+  font-size: 24px;
+}
+
+.page2 {
+  margin: 0 auto;
+  text-align: center;
+  width: 400px;
+  height: 800px;
+  background-color: cadetblue;
+  display: flex;
+  flex-direction: column;
+}
+.page2 .respon {
+  position: relative;
+  align-items: center;
+  text-align: center;
+  margin: 20px auto;
+  width: 250px;
+  height: 40px;
+  background-color: white;
+  border-radius: 10px;
+  border-color: crimson;
+}
+.page2 .respon h2 {
+  font-size: 24px;
+}
+
+.page3 {
+  margin: 0 auto;
+  text-align: center;
+  width: 400px;
+  height: auto;
+  background-color: cadetblue;
+  display: flex;
+  flex-direction: column;
+}
+.page3 .resfrom {
+  position: relative;
+  align-items: center;
+  text-align: center;
+  margin: 20px auto;
+  width: 250px;
+  height: auto;
+  background-color: white;
+  border-radius: 10px;
+  border-color: crimson;
+}/*# sourceMappingURL=style.css.map */
