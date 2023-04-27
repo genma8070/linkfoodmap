@@ -8,7 +8,7 @@ const rate = document.querySelector("#rate");
 const respon = document.querySelector("#res");
 
 choice2.addEventListener("change", function () {
-    
+
 
     if (choice2.value === "addmenu") {
         shop.removeAttribute("disabled")
@@ -26,7 +26,7 @@ choice2.addEventListener("change", function () {
         newprice.removeAttribute("disabled")
         newrate.removeAttribute("disabled")
     }
-  
+
     else {
         shop.setAttribute("disabled", true)
         menu.setAttribute("disabled", true)
@@ -42,12 +42,12 @@ btn.addEventListener("click", function () {
     if (choice2.value === "addmenu") {
 
         let body = {
-            
-                "name": menu.value,
-                "shop": shop.value,
-                "rate": rate.value,
-                "price":price.value
-            
+
+            "name": menu.value,
+            "shop": shop.value,
+            "rate": rate.value,
+            "price": price.value
+
         }
 
         fetch("http://localhost:8080/add_menu", {
@@ -97,5 +97,5 @@ btn.addEventListener("click", function () {
                 console.log(error)
             })
     }
-    
+
 })

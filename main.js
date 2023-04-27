@@ -7,7 +7,7 @@ const respon = document.querySelector("#res");
 
 
 choice.addEventListener("change", function () {
-    
+
 
     if (choice.value === "addshop") {
         shop.removeAttribute("disabled")
@@ -38,7 +38,7 @@ btn.addEventListener("click", function () {
     if (choice.value === "addshop") {
 
         let body = {
-            "eat_map":{
+            "eat_map": {
                 "shop": shop.value,
                 "city": city.value
             }

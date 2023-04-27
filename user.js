@@ -8,7 +8,6 @@ const respon = document.querySelector("#res");
 
 choice3.addEventListener("change", function () {
 
-
     if (choice3.value === "bycity") {
         city.removeAttribute("disabled")
         rate.setAttribute("disabled", true)
@@ -32,15 +31,10 @@ choice3.addEventListener("change", function () {
     }
 })
 
-
 btn.addEventListener("click", function () {
     if (choice3.value === "bycity") {
-
         let body = {
-
             "city": city.value
-
-
         }
 
         fetch("http://localhost:8080/by_city", {
@@ -55,28 +49,29 @@ btn.addEventListener("click", function () {
             })
             .then(function (data) {
                 let reslist = data
-                
-                let content = '<table style="border: 1px solid black; margin: 0px auto">';
-                content += '<thead><tr><th>Shop</th><th>Rate</th><th>Menu</th><th>Menurate</th></tr></thead>';
-                content += '<tbody>';
-                reslist.forEach(reslist => {
-                    content += `<tr><td>${reslist.shop}</td><td>${reslist.rate}</td><td>${reslist.menu}</td><td>${reslist.menurate}</td></tr>`
-                });
-                content += '</tbody></table>';
-                respon.innerHTML = content;
+                if (reslist.length === 0) {
+                    respon.innerText = "無符合條件的店家"
+                }
+                else {
+                    let content = '<table style="border: 1px solid black; margin: 0px auto">';
+                    content += '<thead><tr><th>Shop</th><th>Rate</th><th>Menu</th><th>Menurate</th></tr></thead>';
+                    content += '<tbody>';
+                    reslist.forEach(reslist => {
+                        content += `<tr><td>${reslist.shop}</td><td>${reslist.rate}</td><td>${reslist.menu}</td><td>${reslist.menurate}</td></tr>`
+                    });
+                    content += '</tbody></table>';
+                    respon.innerHTML = content;
+                }
             })
             .catch(function (error) {
                 console.log(error)
             })
+
     }
     if (choice3.value === "byrate") {
 
         let body = {
-
-
             "rate": rate.value
-
-
         }
 
         fetch("http://localhost:8080/by_rate", {
@@ -91,15 +86,19 @@ btn.addEventListener("click", function () {
             })
             .then(function (data) {
                 let reslist = data
-                
-                let content = '<table style="border: 3px solid black; margin: 0px auto"">';
-                content += '<thead><tr><th>Shop</th><th>Rate </th><th>Menu </th><th>Menurate</th></tr></thead>';
-                content += '<tbody>';
-                reslist.forEach(reslist => {
-                    content += `<tr><td>${reslist.shop}</td><td>${reslist.rate}</td><td>${reslist.menu}</td><td>${reslist.menurate}</td></tr>`
-                });
-                content += '</tbody></table>';
-                respon.innerHTML = content;
+                if (reslist.length === 0) {
+                    respon.innerText = "無符合條件的店家"
+                }
+                else {
+                    let content = '<table style="border: 3px solid black; margin: 0px auto"">';
+                    content += '<thead><tr><th>Shop</th><th>Rate </th><th>Menu </th><th>Menurate</th></tr></thead>';
+                    content += '<tbody>';
+                    reslist.forEach(reslist => {
+                        content += `<tr><td>${reslist.shop}</td><td>${reslist.rate}</td><td>${reslist.menu}</td><td>${reslist.menurate}</td></tr>`
+                    });
+                    content += '</tbody></table>';
+                    respon.innerHTML = content;
+                }
 
             })
             .catch(function (error) {
@@ -110,11 +109,8 @@ btn.addEventListener("click", function () {
     if (choice3.value === "bywrate") {
 
         let body = {
-
-
             "rate": rate.value,
             "menurate": menurate.value
-
         }
 
         fetch("http://localhost:8080/by_wrate", {
@@ -129,21 +125,23 @@ btn.addEventListener("click", function () {
             })
             .then(function (data) {
                 let reslist = data
-                
-                let content = '<table style="border: 1px solid black; margin: 0px auto"">';
-                content += '<thead><tr><th>Shop</th><th>Rate</th><th>Menu</th><th>Menurate</th></tr></thead>';
-                content += '<tbody>';
-                reslist.forEach(reslist => {
-                    content += `<tr><td>${reslist.shop}</td><td>${reslist.rate}</td><td>${reslist.menu}</td><td>${reslist.menurate}</td></tr>`
-                });
-                content += '</tbody></table>';
-                respon.innerHTML = content;
+                if (reslist.length === 0) {
+                    respon.innerText = "無符合條件的店家"
+                }
+                else {
+                    let content = '<table style="border: 1px solid black; margin: 0px auto"">';
+                    content += '<thead><tr><th>Shop</th><th>Rate</th><th>Menu</th><th>Menurate</th></tr></thead>';
+                    content += '<tbody>';
+                    reslist.forEach(reslist => {
+                        content += `<tr><td>${reslist.shop}</td><td>${reslist.rate}</td><td>${reslist.menu}</td><td>${reslist.menurate}</td></tr>`
+                    });
+                    content += '</tbody></table>';
+                    respon.innerHTML = content;
+                }
             })
             .catch(function (error) {
                 console.log(error)
             })
     }
-
-
 })
 
