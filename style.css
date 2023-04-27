@@ -1,6 +1,11 @@
 body {
   margin: 0;
   padding: 0;
+  background-image: url("https://media.istockphoto.com/id/1018141890/es/foto/copas-de-vino-vac%C3%ADas-dos-sentados-en-un-restaurante-en-una-c%C3%A1lida-tarde-soleada.jpg?s=612x612&w=0&k=20&c=ykP_wg0GFiEgpvpD-0-AWJT3Pt0_bAvhiwe7Vwu-3KQ=");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 .page1 {
